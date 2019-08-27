@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Mr. Kaehms
  * @version 2.0 Aug 13, 2019
  */
-public class KilgoreTrout extends Student implements SpecialInterestOrHobby
+public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
 {
 
     /**
@@ -21,7 +21,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public KilgoreTrout(String f, String l, int r, int s) {
+    public LacPhongNguyen(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         myRow=r;
@@ -37,9 +37,9 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public KilgoreTrout() {
-        firstName="Kilgore";
-        lastName="Trout";
+    public LacPhongNguyen() {
+        firstName="LacPhong";
+        lastName="Nguyen";
         myRow=1;
         mySeat=1;
        //imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
@@ -116,7 +116,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
          Greenfoot.delay(10);
         // move right
         for (int i=1;i<=9;i++){
-            setLocation(i,0);
+            setLocation(i,2);
             Greenfoot.delay(10);
         }
         // move back

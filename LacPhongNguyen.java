@@ -84,7 +84,7 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
      * Prints the first and last name to the console
      */
     public void getName(){
-        System.out.println("My name is " + firstName + " " + lastName);
+        System.out.println("I " + firstName + " " + lastName+ " have a dream");
     }
     /**
      * This method needs to allow the user to interact with the student through a question and answer interface, and provide

@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * The KilgoreTrout class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
@@ -38,9 +38,9 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public LacPhongNguyen() {
-        firstName="LacPhong";
+        firstName="Lac-Phong";
         lastName="Nguyen";
-        myRow=1;
+        myRow=3;
         mySeat=1;
        //imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
@@ -96,15 +96,35 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
         String q=Greenfoot.ask("What would you like to know");
         if (q.contains("hard")){
             q=Greenfoot.ask("2D arrays, recursion, and merge sort... May I sit down?");
-        
+            q.toLowerCase();
+        }
+        if (q.contains("yes")){
+            sitDown();
+        }
+        if ((q.contains("hi"))||(q.contains("hello"))){
+            q=Greenfoot.ask("Well hello there! I'm Lac-Phong Nguyen. How are you?");
+            q.toLowerCase();
+            if (q.contains("good")){
+                q=Greenfoot.ask("Cool, but I don't care.");
+                sitDown();
+            }
+            if (q.contains("bad")){
+                q=Greenfoot.ask("Feelsbadman. Sucks to be you :P");
+                sitDown();
+            }
         }
         else {
           q=Greenfoot.ask("I don't understand the question... May I sit down?"); 
+            if (q.equals("yes")){
+                Greenfoot.delay(10);
+                sitDown();
+            }
+            else {
+                answerQuestion();
+            }
+            
         }
-         if (q.equals("yes")){
-            Greenfoot.delay(10);
-            sitDown();
-        }
+         
         
     }
     /**
@@ -112,31 +132,46 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
      * You can write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
+        int[][] list = new int[10][10];
+        for (int i=0;i<10;i++){
+            for (int n=0;n<10;n++){
+            list[i][n] = (int)Math.random()*10+1;
+        }
+       }
+        setLocation(1,3);
+        Greenfoot.delay(10);
         // move right
         for (int i=1;i<=9;i++){
-            setLocation(i,2);
-            Greenfoot.delay(10);
+            setLocation(i,3);
+            turn(100);
+            Greenfoot.delay(6);
         }
         // move back
-        for (int i=1;i<=5;i++){
+        for (int i=5;i<=5;i++){
             setLocation(9,i);
-            Greenfoot.delay(10);
+            turn(100);
+            Greenfoot.delay(6);
         }      
          // move left
-        for (int i=9;i>=0;i--){
+        for (int i=5;i>=1;i--){
             setLocation(i,5);
-            Greenfoot.delay(10);
+            turn(100);
+            Greenfoot.delay(6);
         }      
               // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
-    }
+        for (int i=5;i>=3;i--){
+            setLocation(1,i);
+            turn(100);
+            Greenfoot.delay(6);
+        }
+        for (int i=0; i<10;i++){
+            turn(list[(int)Math.random()*10+1][(int)Math.random()*10+1]);
+            Greenfoot.delay(6);
+        }
+        Greenfoot.delay(20);
+        returnToSeat();
+    
+}
      public void myHobby(String s) {
          System.out.println(s);
 }

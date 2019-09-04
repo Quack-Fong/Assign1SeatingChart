@@ -135,7 +135,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(10);
         }   
            Greenfoot.delay(20);
-           returnToSeat();
+           returnToSeat(0);
     }
      public void myHobby(String s) {
          System.out.println(s);

@@ -165,12 +165,18 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(6);
         }
         for (int i=0; i<10;i++){
-            turn(list[(int)Math.random()*10+1][(int)Math.random()*10+1]);
+            turn(list[5][5]);
+            Greenfoot.delay(6);
+            turn(-(list[5][5]));
             Greenfoot.delay(6);
         }
-        Greenfoot.delay(20);
-        returnToSeat();
-    
+        
+        for (int i=0; i<10;i++){
+        returnToSeat(list[5][5]);
+        Greenfoot.delay(6);
+        returnToSeat(-(list[5][5]));
+        Greenfoot.delay(6);
+    }
 }
      public void myHobby(String s) {
          System.out.println(s);

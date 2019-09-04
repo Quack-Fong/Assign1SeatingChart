@@ -59,11 +59,12 @@ public abstract class Student extends Actor
         Greenfoot.playSound(myNameFile);
     }
     
-    public void returnToSeat(){
+    public void returnToSeat(int n){
         setLocation(mySeat,myRow);
+        turn (n);
     }
     public void sitDown(){
-        returnToSeat();
+        returnToSeat(0);
         setImage(portraitFile);
         sitting=true;
     }

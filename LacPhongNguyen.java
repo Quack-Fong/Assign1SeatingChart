@@ -65,7 +65,7 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to time travel!");
+                myHobby("I like to play basketball, volleyball, and Nintendo games!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
@@ -171,12 +171,18 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(6);
         }
         
-        for (int i=0; i<10;i++){
-        returnToSeat(list[5][5]);
-        Greenfoot.delay(6);
-        returnToSeat(-(list[5][5]));
-        Greenfoot.delay(6);
-    }
+        for (int i=0; i<25;i++){
+            returnToSeat(list[5][5]);
+            GreenfootImage image = getImage();
+            image.scale((image.getWidth()+3),(image.getHeight()+3));
+            Greenfoot.delay(6);
+            returnToSeat(-(list[5][5]));
+            Greenfoot.delay(6);
+            
+            
+        }
+        
+        
 }
      public void myHobby(String s) {
          System.out.println(s);

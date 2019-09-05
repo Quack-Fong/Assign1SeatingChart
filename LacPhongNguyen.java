@@ -97,9 +97,10 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
         if (q.contains("hard")){
             q=Greenfoot.ask("2D arrays, recursion, and merge sort... May I sit down?");
             q.toLowerCase();
-        }
-        if (q.contains("yes")){
+            if (q.contains("yes")){
+            Greenfoot.delay(10);
             sitDown();
+        }
         }
         if ((q.contains("hi"))||(q.contains("hello"))){
             q=Greenfoot.ask("Well hello there! I'm Lac-Phong Nguyen. How are you?");

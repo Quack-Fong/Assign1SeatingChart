@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author Mr. Kaehms
  * @version 2.0 Aug 13, 2019
  */
-public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
+public class LacPhongNguyen extends Student implements SpecialInterestOrHobby, NumberOfSiblings
 {
 
     /**
@@ -92,15 +92,52 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby
      * with some additional class and object that represents a blackboard, or a talking cartoon bubble etc. If you provide extra
      * classes, make sure to fully document so other students can use the same interface.
      */
+    public int numberOfSiblings(){
+        return 2;
+    }
+    public int numberOfBrothers(){
+        return 1;
+    }
+    public int numberOfSisters(){
+        return 1;
+    }
     public void answerQuestion(){
-        String q=Greenfoot.ask("What would you like to know");
+        String q=Greenfoot.ask("What would you like to know?");
+        q.toLowerCase();
         if (q.contains("hard")){
-            q=Greenfoot.ask("2D arrays, recursion, and merge sort... May I sit down?");
+            q=Greenfoot.ask("I found inheritance a bit confusing as well as the binary and merge sorts and interfaces... May I sit down?");
             q.toLowerCase();
             if (q.contains("yes")){
-            Greenfoot.delay(10);
-            sitDown();
+                Greenfoot.delay(10);
+                sitDown();
+            if (q.contains("inheritance")){
+                q=Greenfoot.ask("Inheritance is a mechanism in Java where a subclass will inherit the characteristics of its superclass. The way the teacher was explaining it was a little hard to understand and I had to replay the videos several times because it was so hard to pay attention to her... May I sit down?");
+                q.toLowerCase();
+                if (q.contains("yes")){
+                    Greenfoot.delay(10);
+                    sitDown();
+                }
+            }
+            if (q.contains("binary")||q.contains("merge")){
+                q=Greenfoot.ask("Binary Search is a way to sort an array through repeatedly dividing the search interval half. A merge sort is a divide and conquer algorithm where it divides the array into two halfs repeatedly until the array is fully sorted... May I sit down?");
+                q.toLowerCase();
+                if (q.contains("yes")){
+                    Greenfoot.delay(10);
+                    sitDown();
+                }
+            }
+            if (q.contains("interfaces")){
+                q=Greenfoot.ask("The interface is a mechanism in java that serves as a blueprint of a class which contains static constants and abstract methods. They can only contain abstract methods... May I sit down?");
+                q.toLowerCase();
+                if (q.contains("yes")){
+                    Greenfoot.delay(10);
+                    sitDown();
+                }
+            }
         }
+        }
+        if (q.contains("siblings")){
+            
         }
         if ((q.contains("hi"))||(q.contains("hello"))){
             q=Greenfoot.ask("Well hello there! I'm Lac-Phong Nguyen. How are you?");

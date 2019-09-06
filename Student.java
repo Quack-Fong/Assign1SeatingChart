@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public abstract class Student extends Actor
 {
    //Instance variables
-   public static int numStudents;
    public String firstName;
    public String lastName;
    public int myRow;         // rows start in the front of class (1), and end in the back of class

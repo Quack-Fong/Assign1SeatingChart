@@ -107,9 +107,6 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby, N
         if (q.contains("hard")){
             q=Greenfoot.ask("I found inheritance a bit confusing as well as the binary and merge sorts and interfaces... May I sit down?");
             q.toLowerCase();
-            if (q.contains("yes")){
-                Greenfoot.delay(10);
-                sitDown();
             if (q.contains("inheritance")){
                 q=Greenfoot.ask("Inheritance is a mechanism in Java where a subclass will inherit the characteristics of its superclass. The way the teacher was explaining it was a little hard to understand and I had to replay the videos several times because it was so hard to pay attention to her... May I sit down?");
                 q.toLowerCase();
@@ -117,6 +114,9 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby, N
                     Greenfoot.delay(10);
                     sitDown();
                 }
+                else {
+                answerQuestion();
+            }
             }
             if (q.contains("binary")||q.contains("merge")){
                 q=Greenfoot.ask("Binary Search is a way to sort an array through repeatedly dividing the search interval half. A merge sort is a divide and conquer algorithm where it divides the array into two halfs repeatedly until the array is fully sorted... May I sit down?");
@@ -125,19 +125,54 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby, N
                     Greenfoot.delay(10);
                     sitDown();
                 }
+                else {
+                answerQuestion();
             }
-            if (q.contains("interfaces")){
+            }
+            if (q.contains("interface")){
                 q=Greenfoot.ask("The interface is a mechanism in java that serves as a blueprint of a class which contains static constants and abstract methods. They can only contain abstract methods... May I sit down?");
                 q.toLowerCase();
                 if (q.contains("yes")){
                     Greenfoot.delay(10);
                     sitDown();
                 }
+                else {
+                    answerQuestion();
+                }
             }
         }
-        }
         if (q.contains("siblings")){
-            
+            q=Greenfoot.ask("I have " + numberOfSiblings() + " but I like to consider by 2 other cousins as siblings because I have lived with them for my entire life... May I sit down?");
+            q.toLowerCase();
+            if (q.equals("yes")){
+                Greenfoot.delay(10);
+                sitDown();
+            }
+            else {
+                answerQuestion();
+            }
+        }
+        if (q.contains("brother")){
+            q=Greenfoot.ask("I have only " + numberOfBrothers() + " brother... May I sit down?");
+            q.toLowerCase();
+            if (q.equals("yes")){
+                Greenfoot.delay(10);
+                sitDown();
+            }
+            else {
+                answerQuestion();
+            }
+        }
+        if (q.contains("sister")){
+            q=Greenfoot.ask("I have only " + numberOfSisters() + " sister... May I sit down?");
+            q.toLowerCase();
+            if (q.equals("yes")){
+                Greenfoot.delay(10);
+                sitDown();
+            }
+            else {
+                answerQuestion();
+            }
         }
         if ((q.contains("hi"))||(q.contains("hello"))){
             q=Greenfoot.ask("Well hello there! I'm Lac-Phong Nguyen. How are you?");

@@ -105,7 +105,7 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby, N
         String q=Greenfoot.ask("What would you like to know?");
         q.toLowerCase();
         if (q.contains("hard")){
-            q=Greenfoot.ask("I found inheritance a bit confusing as well as the binary and merge sorts and interfaces... May I sit down?");
+            q=Greenfoot.ask("I found inheritance a bit confusing as well as the binary and merge sorts, interfaces, recursion, and DeMorgan's Law... May I sit down?");
             q.toLowerCase();
             if (q.contains("inheritance")){
                 q=Greenfoot.ask("Inheritance is a mechanism in Java where a subclass will inherit the characteristics of its superclass. The way the teacher was explaining it was a little hard to understand and I had to replay the videos several times because it was so hard to pay attention to her... May I sit down?");
@@ -131,6 +131,28 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby, N
             }
             if (q.contains("interface")){
                 q=Greenfoot.ask("The interface is a mechanism in java that serves as a blueprint of a class which contains static constants and abstract methods. They can only contain abstract methods... May I sit down?");
+                q.toLowerCase();
+                if (q.contains("yes")){
+                    Greenfoot.delay(10);
+                    sitDown();
+                }
+                else {
+                    answerQuestion();
+                }
+            }
+            if (q.contains("recursion")){
+                q=Greenfoot.ask("Recursion is the process in which a method calls itself continuously. This makes the code more comact, but somewhat more complex to understand... May I sit down?");
+                q.toLowerCase();
+                if (q.contains("yes")){
+                    Greenfoot.delay(10);
+                    sitDown();
+                }
+                else {
+                    answerQuestion();
+                }
+            }
+            if (q.contains("demorgan")){
+                q=Greenfoot.ask("Demorgan's Law basically describes how mathematical statements and concepts are related through their opposites. This was a little confusing to me because some interactions between certain symbols like greater than and less than were a bit confusing... May I sit down?");
                 q.toLowerCase();
                 if (q.contains("yes")){
                     Greenfoot.delay(10);
@@ -238,9 +260,9 @@ public class LacPhongNguyen extends Student implements SpecialInterestOrHobby, N
             Greenfoot.delay(6);
         }
         for (int i=0; i<10;i++){
-            turn(list[5][5]);
+            turn(list[i][i]);
             Greenfoot.delay(6);
-            turn(-(list[5][5]));
+            turn(-(list[i][i]));
             Greenfoot.delay(6);
         }
         
